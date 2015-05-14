@@ -43,25 +43,9 @@ foreach($rows as $row) {
 }
 unset($dom,$html,$uri);
 
-scraperwiki::sqliteexecute("drop table councillors");
-scraperwiki::sqliteexecute("create table if not exists councillors (`auth` string, `lea` string, `name` string, `party` string, `email` string, `phone` text, `mobile` text, `image` string,  `address` string)");
-scraperwiki::sqlitecommit();
 
-foreach ($councillors as $name => $values) {
-    scraperwiki::sqliteexecute("insert or replace into councillors values (:auth, :lea, :name, :party, :email, :phone, :mobile, :image, :address)", 
-            array(  "auth"    => "Dublin City Council", 
-                    "lea"     => $values["LEA"],
-                    "name"    => $name,
-                    "party"   => $values["Party"],
-                    "email"   => $values["Email"],
-                    "phone"   => $values["Phone"],
-                    "mobile"  => $values["Mobile"],
-                    "image"   => $values["Image"],
-                    "address" => $values["Address"],
-            )
-    );
-}
-scraperwiki::sqlitecommit();
+scraperwiki::save(array('name'), $councillors);
+
 
 
 
