@@ -2,7 +2,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 $council = "Dublin City Council";
-$uri = "http://www.dublincity.ie/YourCouncil/Councillors/Pages/FullCouncillorList.aspx";
+$uri = "http://www.dublincity.ie/main-menu-your-council-your-city-councillors/full-councillor-list";
 $councillors = array();
 
 
