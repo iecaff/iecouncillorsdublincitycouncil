@@ -1,4 +1,5 @@
 <?php
+require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 $council = "Dublin City Council";
 $uri = "http://www.dublincity.ie/YourCouncil/Councillors/Pages/FullCouncillorList.aspx";
