@@ -43,8 +43,11 @@ foreach($rows as $row) {
 }
 unset($dom,$html,$uri);
 
+foreach ($councillors as $name) {
 
-scraperwiki::save(array('name'), $councillors);
+    scraperwiki::save(array('name'), $councillors);
+}
+
 
 
 
