@@ -8,7 +8,8 @@ front_page = mechanize.get('http://www.dublincity.ie/main-menu-your-council-your
 page_urls = front_page.search('div#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField a')
 
 page_urls.each do |con_link|
-      con_page = Mechanize::Page::Link.new( con_link, mechanize, front_page ).click
+      con_url = Mechanize::Page::Link.new( con_link, mechanize, front_page )
+      con_page = con_url.click
        if con_page.at('picture img')
          image_url = con_page.at('picture source')['srcset'].gsub(/\s.+/, '')
        else
@@ -17,12 +18,8 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-    con_text = con_page.search('div#eventDetails')
-    con_text.each do |con_string|
-       con_parse = con_string.parse.css
-      puts con_parse
-    end
- 
+    con_doc = agent.get(someurl).parser
+    puts con_doc.css
  
 end
 
