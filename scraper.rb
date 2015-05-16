@@ -32,7 +32,7 @@ page_urls.each do |con_link|
      puts con_email
      end
      if con_page.at("strong:contains('Area')").nil?
-     con_area = con_page.at("p:contains('Area')").next.text
+     con_area = con_page.at("p:contains('Area')").next_element.text
      puts con_area
           elsif con_page.at("strong:contains('Area')").next.next.text
      con_area = con_page.at("strong:contains('Area')").next.next.text
