@@ -10,7 +10,7 @@ page_urls = front_page.search('div#ctl00_PlaceHolderMain_ctl02__ControlWrapper_R
 page_urls.each do |con_link|
       con_page = Mechanize::Page::Link.new( con_link, mechanize, front_page ).click
      image_url = con_page.at('div#eventDetails img')['src']
-     con_image = Mechanize::Page::Link.new( image_url, mechanize, front_page ).text
+     con_image = front_page.uri.merge image_url.uri
      puts con_image
   
 end
