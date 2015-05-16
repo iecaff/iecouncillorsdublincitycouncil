@@ -31,7 +31,7 @@ page_urls.each do |con_link|
      con_email = con_page.at("strong:contains('Email')").next.next.text
      puts con_email
      end
-     if con_page.at("strong:contains('Area')").nil
+     if con_page.at("strong:contains('Area')").nil?
      con_area = con_page.at("p:contains('Area')").next.text
      puts con_area
           elsif con_page.at("strong:contains('Area')").next.next.text
