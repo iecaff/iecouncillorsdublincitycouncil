@@ -18,7 +18,7 @@ page_urls.each do |con_link|
      puts con_image
      
      if con_page.at("strong:contains('Ward')").nil?
-           con_ward = con_page.at("p.contains('Ward").next.text
+           con_ward = con_page.at("p.contains('Ward')").next.text
      elsif con_page.at("strong:contains('Ward')").next.next.text
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
