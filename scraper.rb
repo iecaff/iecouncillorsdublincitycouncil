@@ -17,7 +17,7 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_ward = con_page.at("p:contains('Ward')").next.text
+     con_ward = con_page.at("strong:contains('Ward')").next.text
      puts con_ward
 end
 
