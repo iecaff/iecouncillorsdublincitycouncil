@@ -1,0 +1,2 @@
+require 'scraperwiki'
+require 'mechanize'
