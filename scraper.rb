@@ -22,31 +22,31 @@ page_urls.each do |con_link|
      puts con_ward
      end
      if con_page.at("strong:contains('Email')").next.next.text
-     con_ward = con_page.at("strong:contains('Email')").next.next.text
+     con_email = con_page.at("strong:contains('Email')").next.next.text
      puts con_email
      end
           if con_page.at("strong:contains('Area')").next.next.text
-     con_ward = con_page.at("strong:contains('Area')").next.next.text
+     con_area = con_page.at("strong:contains('Area')").next.next.text
      puts con_area
      end
      if con_page.at("strong:contains('Phone')").next.next.text
-     con_ward = con_page.at("strong:contains('Phone')").next.next.text
+     con_phone = con_page.at("strong:contains('Phone')").next.next.text
      puts con_phone
      end
           if con_page.at("strong:contains('Mobile')").next.next.text
-     con_ward = con_page.at("strong:contains('Mobile')").next.next.text
+     con_mobile = con_page.at("strong:contains('Mobile')").next.next.text
      puts con_mobile
      end
      if con_page.at("strong:contains('Fax')").next.next.text
-     con_ward = con_page.at("strong:contains('Fax')").next.next.text
+     con_fax = con_page.at("strong:contains('Fax')").next.next.text
      puts con_fax
      end
           if con_page.at("strong:contains('Party')").next.next.text
-     con_ward = con_page.at("strong:contains('Party')").next.next.text
+     con_party = con_page.at("strong:contains('Party')").next.next.text
      puts con_party
      end
      if con_page.at("strong:contains('Address')").next.next.text
-     con_ward = con_page.at("strong:contains('Address')").next.next.text
+     con_address = con_page.at("strong:contains('Address')").next.next.text
      puts con_address
      end
 end
