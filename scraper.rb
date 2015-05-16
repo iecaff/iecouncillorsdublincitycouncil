@@ -22,7 +22,7 @@ page_urls.each do |con_link|
      puts con_ward
      end
      if con_page.at("strong:contains('Email')").next.nil?
-     con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').next.text
+     con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').text
           puts con_email
      else     
      con_email = con_page.at("strong:contains('Email')").next.next.text
