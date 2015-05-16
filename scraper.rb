@@ -19,6 +19,7 @@ page_urls.each do |con_link|
      
      if con_page.at("strong:contains('Ward')").nil?
            con_ward = con_page.at("p:contains('Ward')").next.text
+           puts con_ward
      elsif con_page.at("strong:contains('Ward')").next.next.text
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
@@ -30,7 +31,10 @@ page_urls.each do |con_link|
      con_email = con_page.at("strong:contains('Email')").next.next.text
      puts con_email
      end
-          if con_page.at("strong:contains('Area')").next.next.text
+     if con_page.at("strong:contains('Area')").nil
+     con_area = con_page.at("p:contains('Area')").next.text
+     puts con_area
+          elsif con_page.at("strong:contains('Area')").next.next.text
      con_area = con_page.at("strong:contains('Area')").next.next.text
      puts con_area
      end
