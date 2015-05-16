@@ -17,8 +17,38 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
+     if con_page.at("strong:contains('Ward')").next.next.text
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
+     end
+     if con_page.at("strong:contains('Email')").next.next.text
+     con_ward = con_page.at("strong:contains('Email')").next.next.text
+     puts con_email
+     end
+          if con_page.at("strong:contains('Area')").next.next.text
+     con_ward = con_page.at("strong:contains('Area')").next.next.text
+     puts con_area
+     end
+     if con_page.at("strong:contains('Phone')").next.next.text
+     con_ward = con_page.at("strong:contains('Phone')").next.next.text
+     puts con_phone
+     end
+          if con_page.at("strong:contains('Mobile')").next.next.text
+     con_ward = con_page.at("strong:contains('Mobile')").next.next.text
+     puts con_mobile
+     end
+     if con_page.at("strong:contains('Fax')").next.next.text
+     con_ward = con_page.at("strong:contains('Fax')").next.next.text
+     puts con_fax
+     end
+          if con_page.at("strong:contains('Party')").next.next.text
+     con_ward = con_page.at("strong:contains('Party')").next.next.text
+     puts con_party
+     end
+     if con_page.at("strong:contains('Address')").next.next.text
+     con_ward = con_page.at("strong:contains('Address')").next.next.text
+     puts con_address
+     end
 end
 
 
