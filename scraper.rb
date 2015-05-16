@@ -17,7 +17,7 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-    con_text = con_page.search('div#eventDetails')
+    con_text = con_page.search('div#eventDetails').text
     con_text.each do |con_string|
     puts con_string
     end
