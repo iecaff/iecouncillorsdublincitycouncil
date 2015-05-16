@@ -19,7 +19,7 @@ page_urls.each do |con_link|
      
     con_text = con_page.search('div#eventDetails')
     con_text.each do |con_string|
-      puts    con_string.search('#text')
+      puts con_string.parse.at.to_s
     end
  
  
