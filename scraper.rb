@@ -18,8 +18,8 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-    con_doc = mechanize.get(con_url).parser
-    puts con_doc.css
+    con_doc = con_page.parser
+    puts con_doc.css.text
  
 end
 
