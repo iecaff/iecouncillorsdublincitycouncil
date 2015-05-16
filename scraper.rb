@@ -51,12 +51,15 @@ page_urls.each do |con_link|
      con_mobile = con_page.at("p:contains('Mobile')").next_element.text
      puts con_mobile
      elsif con_page.at("strong:contains('Mobile')").next.nil?
-     con_mobile = con_page.at("strong:contains('Mobile')").parent.next.text
+     con_mobile = con_page.at("strong:contains('Mobile')").parent.next_element.text
      puts con_mobile
           elsif con_page.at("strong:contains('Mobile')").next.next.text
      con_mobile = con_page.at("strong:contains('Mobile')").next.next.text
      puts con_mobile
      end
+      if con_page.at("strong:contains('Party')").nil?
+     con_party = con_page.at("p:contains('Party')").next_element.at('p').text
+     puts con_party
           if con_page.at("strong:contains('Party')").next.next.text
      con_party = con_page.at("strong:contains('Party')").next.next.text
      puts con_party
