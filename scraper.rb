@@ -49,8 +49,3 @@ page_urls.each do |con_link|
      end
 end
 
-
-    Status API Training Shop Blog About 
-
-    © 2015 GitHub, Inc. Terms Privacy Security Contact 
-
