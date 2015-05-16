@@ -19,7 +19,7 @@ page_urls.each do |con_link|
      puts con_image
      
     con_doc = con_page.parser
-    puts con_doc.css('div.textContent').text
+    puts con_doc.css('div.eventDetails').text
  
 end
 
