@@ -65,7 +65,7 @@ page_urls.each do |con_link|
      puts con_party
      end
      if con_page.at('address')
-      con_address = con_page.at('//Address').text
+      con_address = con_page.at('/Address').text
      puts con_address
      elsif con_page.at("strong:contains('Address')").next.nil?
            con_address = con_page.at("strong:contains('Address')").parent.next_element.at('br').previous.text
