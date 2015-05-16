@@ -60,11 +60,14 @@ page_urls.each do |con_link|
       if con_page.at("strong:contains('Party')").nil?
      con_party = con_page.at("p:contains('Party')").next_element.at('p').text
      puts con_party
-          if con_page.at("strong:contains('Party')").next.next.text
+          elsif con_page.at("strong:contains('Party')").next.next.text
      con_party = con_page.at("strong:contains('Party')").next.next.text
      puts con_party
      end
-     if con_page.at("strong:contains('Address')").next.nil?
+     if con_page.at('address')
+      con_address = con_page.at('Address').text
+     puts con_address
+     elsif con_page.at("strong:contains('Address')").next.nil?
            con_address = con_page.at("strong:contains('Address')").parent.next_element.at('br').previous.text
      puts con_address
      else
