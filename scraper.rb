@@ -37,10 +37,6 @@ page_urls.each do |con_link|
      con_mobile = con_page.at("strong:contains('Mobile')").next.next.text
      puts con_mobile
      end
-     if con_page.at("strong:contains('Fax')").next.next.text
-     con_fax = con_page.at("strong:contains('Fax')").next.next.text
-     puts con_fax
-     end
           if con_page.at("strong:contains('Party')").next.next.text
      con_party = con_page.at("strong:contains('Party')").next.next.text
      puts con_party
