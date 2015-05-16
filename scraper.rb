@@ -21,7 +21,7 @@ page_urls.each do |con_link|
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
      end
-     if con_page.at("strong:contains('Email')").next.next.text == FALSE
+     if con_page.at("strong:contains('Email')").next.nil?
      con_email = con_page.at("strong:contains('Email')").next.next.next.next.next.text
      else     
      con_email = con_page.at("strong:contains('Email')").next.next.text
