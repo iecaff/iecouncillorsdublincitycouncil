@@ -50,7 +50,7 @@ page_urls.each do |con_link|
       if con_page.at("strong:contains('Mobile')").nil?
      con_mobile = con_page.at("p:contains('Mobile')").next_element.text
      puts con_mobile
-     elsif con_page.at("strong:contains('Mobile')").next.next.nil?
+     elsif con_page.at("strong:contains('Mobile')").next.nil?
      con_mobile = con_page.at("strong:contains('Mobile')").parent.next.text
      puts con_mobile
           elsif con_page.at("strong:contains('Mobile')").next.next.text
