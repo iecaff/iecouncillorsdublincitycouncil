@@ -32,7 +32,7 @@ page_urls.each do |con_link|
      con_area = con_page.at("strong:contains('Area')").next.next.text
      puts con_area
      end
-     if con_page.at("strong:contains('Phone')").next_element.next.text
+     if con_page.at("strong:contains('Phone')").parent.text
      con_phone = ""
      elsif con_page.at("strong:contains('Phone')").next.next.text
      con_phone = con_page.at("strong:contains('Phone')").next.next.text
