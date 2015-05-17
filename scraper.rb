@@ -28,25 +28,43 @@ page_urls.each do |con_link|
       when 'Area:' 
        puts 'Area: ' + con_text[i+1]
       when 'Ward:' 
-      puts 'Ward: ' + con_text[i+1]    
+      puts 'Ward: ' + con_text[i+1]   
+      con_ward = con_text[i+1]   
       when 'Elected:' 
       puts 'Elected: ' + con_text[i+1]      
       when 'Party:' 
        puts 'Party: ' + con_text[i+1]   
+       con_party = con_text[i+1]   
       when 'Address:' 
-      puts 'Address: ' + con_text[i+1]  
+      puts 'Address: ' + con_text[i+1] 
+      con_address = con_text[i+1]   
       when 'Email:' 
-      puts 'Email: ' + con_text[i+1]      
+      puts 'Email: ' + con_text[i+1]  
+      con_email = con_text[i+1]   
       when 'Phone:' 
-      puts 'Phone: ' + con_text[i+1]     
+      puts 'Phone: ' + con_text[i+1]   
+      con_phone = con_text[i+1]   
       when 'Mobile:'
-      puts 'Mobile: ' + con_text[i+1]    
+      puts 'Mobile: ' + con_text[i+1] 
+      con_mobile = con_text[i+1]   
       when 'Fax:' 
       puts 'Fax: ' + con_text[i+1]
       else
             puts "blank"
 end
 end
+con_record = {
+:auth =>     con_auth,
+:lea 	=>     con_lea,
+:name =>	con_name,
+:party =>	con_party,
+:email =>	con_email,
+:phone =>	con_phone,
+:mobile =>	con_mobile,
+:image =>	con_image,
+:address => con_address
+}
+ScraperWiki.save_sqlite([:name], con_record)
   end
             
      
