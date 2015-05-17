@@ -17,7 +17,8 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_text = con_page.parser.css("div[class='node node-article clearfix']").map(&:text)
+     con_nodes = con_page.parser.css("div[class='node node-article clearfix']").children
+     con_text=con_nodes.map(&:content)
      con_text.each do |con_string|
            puts "next"
         puts con_string
