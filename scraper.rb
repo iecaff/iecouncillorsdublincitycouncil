@@ -62,7 +62,7 @@ con_record = {
 :email =>	con_email,
 :phone =>	con_phone,
 :mobile =>	con_mobile,
-:image =>	con_image,
+:image =>	con_image.to_s,
 :address => con_address
 }
 ScraperWiki.save_sqlite([:name], con_record)
