@@ -20,7 +20,7 @@ page_urls.each do |con_link|
      con_text = con_page.parser.css("div[class='node node-article clearfix']").map(&:text)
      con_text.each do |con_string|
            puts "next"
-        puts con_string.content
+        puts con_string
   end
             
      
