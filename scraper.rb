@@ -18,7 +18,7 @@ page_urls.each do |con_link|
      puts con_image
      
      con_text = con_page.at('div#eventdetails')
-         con_text.each do |con_string|
-           puts con_string.text
-     end
+        puts con_text 
+            
+     
 end
