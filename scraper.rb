@@ -26,23 +26,23 @@ page_urls.each do |con_link|
            else
                  case con_string
       when 'Area:' 
-       puts 'Area: ' + con_string
+       puts 'Area: ' + con_text[i+1]
       when 'Ward:' 
-      puts 'Ward: ' + con_string     
+      puts 'Ward: ' + con_text[i+1]    
       when 'Elected:' 
-      puts 'Elected: ' + con_string      
+      puts 'Elected: ' + con_text[i+1]      
       when 'Party:' 
-       puts 'Party: ' + con_string      
+       puts 'Party: ' + con_text[i+1]   
       when 'Address:' 
-      puts 'Address: ' + con_string     
+      puts 'Address: ' + con_text[i+1]  
       when 'Email:' 
-      puts 'Email: ' + con_string      
+      puts 'Email: ' + con_text[i+1]      
       when 'Phone:' 
-      puts 'Phone: ' + con_string      
+      puts 'Phone: ' + con_text[i+1]     
       when 'Mobile:'
-      puts 'Mobile: ' + con_string     
+      puts 'Mobile: ' + con_text[i+1]    
       when 'Fax:' 
-      puts 'Fax: ' + con_string
+      puts 'Fax: ' + con_text[i+1]
       else
             puts "blank"
 end
