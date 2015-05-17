@@ -27,11 +27,11 @@ page_urls.each do |con_link|
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
      end
-      if con_page.at("strong:contains('Email')").parent.next_element.nil?
-        con_email = con_page.at("strong:contains('Email')").parent.next_element.text
+      if con_page.at("strong:contains('Email')").parent.next_element.at('a')
+        con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').text
       puts con_email
      elsif con_page.at("strong:contains('Email')").next.nil?
-      con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').text
+      con_email = con_page.at("strong:contains('Email')").parent.next_element.text
       puts con_email
      else     
       con_email = con_page.at("strong:contains('Email')").next.next.text
