@@ -27,6 +27,7 @@ page_urls.each do |con_link|
                  case con_string
       when 'Area:' 
        puts 'Area: ' + con_text[i+1]
+       con_area = con_text[i+1]  
       when 'Ward:' 
       puts 'Ward: ' + con_text[i+1]   
       con_ward = con_text[i+1]   
@@ -54,8 +55,8 @@ page_urls.each do |con_link|
 end
 end
 con_record = {
-:auth =>     con_auth,
-:lea 	=>     con_lea,
+:auth =>     con_area,
+:lea 	=>     con_ward,
 :name =>	con_name,
 :party =>	con_party,
 :email =>	con_email,
