@@ -17,7 +17,7 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_text con_page.p.xpath('//text()').text
+     con_text = con_page.xpath('//text()').text
          
            puts con_text
 end
