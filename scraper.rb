@@ -22,23 +22,23 @@ page_urls.each do |con_link|
      con_text=con_nodes.map(&:text).delete_if{|x| x !~ /\w/}
      con_text.each_with_index do |con_string,i|
                  case con_string
-      when 'Area:' && con_info.has? con_text[i+1]
+      when 'Area:' AND con_info.has? con_text[i+1]
        puts 'Area: ' + con_string
-      when 'Ward:' && con_info.has? con_text[i+1]
+      when 'Ward:' AND con_info.has? con_text[i+1]
       puts 'Ward: ' + con_string     
-      when 'Elected:' && con_info.has? con_text[i+1]
+      when 'Elected:' AND con_info.has? con_text[i+1]
       puts 'Elected: ' + con_string      
-      when 'Party:' && con_info.has? con_text[i+1]
+      when 'Party:' AND con_info.has? con_text[i+1]
        puts 'Party: ' + con_string      
-      when 'Address:' && con_info.has? con_text[i+1]
+      when 'Address:' AND con_info.has? con_text[i+1]
       puts 'Address: ' + con_string     
-      when 'Email:' && con_info.has? con_text[i+1]
+      when 'Email:' AND con_info.has? con_text[i+1]
       puts 'Email: ' + con_string      
-      when 'Phone:' && con_info.has? con_text[i+1]
+      when 'Phone:' AND con_info.has? con_text[i+1]
       puts 'Phone: ' + con_string      
-      when 'Mobile:' && con_info.has? con_text[i+1]
+      when 'Mobile:' AND con_info.has? con_text[i+1]
       puts 'Mobile: ' + con_string     
-      when 'Fax:' && con_info.has? con_text[i+1]
+      when 'Fax:' AND con_info.has? con_text[i+1]
       puts 'Fax: ' + con_string
       else
             puts "blank"
