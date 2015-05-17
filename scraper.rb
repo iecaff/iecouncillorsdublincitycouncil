@@ -22,7 +22,7 @@ page_urls.each do |con_link|
            puts con_ward
      elsif con_page.at("strong:contains('Ward')").next.nil?
      con_ward = con_page.at("strong:contains('Ward')").parent.next_element.text
-     puts con_ward
+     puts con_ward 
      elsif con_page.at("strong:contains('Ward')").next.next.text
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
