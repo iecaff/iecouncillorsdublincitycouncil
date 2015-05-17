@@ -24,31 +24,31 @@ page_urls.each do |con_link|
                  case con_string
       when 'Area:'
       if con_info.has? con_text[i+1]
-      else puts 'Area: ' + con_string
+            else puts 'Area: ' + con_string
       when 'Ward:'
        if con_info.has? con_text[i+1]
-      else puts 'Ward: ' + con_string     
+            else puts 'Ward: ' + con_string     
       when 'Elected:'
       if con_info.has? con_text[i+1]
-      else puts 'Elected: ' + con_string      
+            else puts 'Elected: ' + con_string      
       when 'Party:'
       if con_info.has? con_text[i+1]
-      else puts 'Party: ' + con_string      
+            else puts 'Party: ' + con_string      
       when 'Address:'
        if con_info.has? con_text[i+1]
-      else puts 'Address: ' + con_string     
+            else puts 'Address: ' + con_string     
       when 'Email:'
       if con_info.has? con_text[i+1]
-      else puts 'Email: ' + con_string      
+            else puts 'Email: ' + con_string      
       when 'Phone:'
       if con_info.has? con_text[i+1]
-      else puts 'Phone: ' + con_string      
+            else puts 'Phone: ' + con_string      
       when 'Mobile:'
        if con_info.has? con_text[i+1]
-      else puts 'Mobile: ' + con_string     
+            else puts 'Mobile: ' + con_string     
       when 'Fax:'
       if con_info.has? con_text[i+1]
-      else puts 'Fax: ' + con_string
+            else puts 'Fax: ' + con_string
       else
             puts "blank"
 end
