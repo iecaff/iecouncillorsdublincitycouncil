@@ -27,18 +27,24 @@ page_urls.each do |con_link|
      con_ward = con_page.at("strong:contains('Ward')").next.next.text
      puts con_ward
      end
-     if con_page.at("strong:contains('Email')").next.nil?
-     con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').text
-          puts con_email
+      if con_page.at("strong:contains('Email')").parent.next_element.at('a').nil?
+        con_email = con_page.at("strong:contains('Email')").parent.next_element.text
+      puts con_email
+     elsif con_page.at("strong:contains('Email')").next.nil?
+      con_email = con_page.at("strong:contains('Email')").parent.next_element.at('a').text
+      puts con_email
      else     
-     con_email = con_page.at("strong:contains('Email')").next.next.text
-     puts con_email
+      con_email = con_page.at("strong:contains('Email')").next.next.text
+      puts con_email
      end
-     if con_page.at("strong:contains('Area')").nil?
-     con_area = con_page.at("p:contains('Area')").next_element.text
+          if con_page.at("strong:contains('Area')").next.nil?
+      con_area = con_page.at("p:contains('Area')").parent.next_element.text
      puts con_area
-          elsif con_page.at("strong:contains('Area')").next.next.text
-     con_area = con_page.at("strong:contains('Area')").next.next.text
+     elsif con_page.at("strong:contains('Area')").nil?
+      con_area = con_page.at("p:contains('Area')").next_element.text
+     puts con_area
+     elsif con_page.at("strong:contains('Area')").next.next.text
+      con_area = con_page.at("strong:contains('Area')").next.next.text
      puts con_area
      end
      if con_page.at("strong:contains('Phone')").nil?
