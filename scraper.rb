@@ -17,7 +17,7 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_nodes = con_page.parser.css("div[class='node node-article clearfix']")
+     con_nodes = con_page.search("div[class='node node-article clearfix']")
      con_text=con_nodes.map(&:text).delete_if{|x| x !~ /\w/}
      con_text.each do |con_string|
            puts "next"
