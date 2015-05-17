@@ -17,8 +17,8 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_text = con_page.at('div#eventdetails')
-        puts con_text.content
+     con_text = con_page.at('div#eventdetails').inner_text
+        puts con_text
             
      
 end
