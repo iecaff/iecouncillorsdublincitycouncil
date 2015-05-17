@@ -17,8 +17,10 @@ page_urls.each do |con_link|
      con_image = con_page.uri.merge image_url
      puts con_image
      
-     con_text = con_page.parser.css("div[class='node node-article clearfix']").inner_text
-        puts con_text
+     con_text = con_page.parser.css("div[class='node node-article clearfix']")
+     con_text.each do |con_string|
+        puts con_string.content
+  end
             
      
 end
