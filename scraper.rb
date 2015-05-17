@@ -21,29 +21,32 @@ page_urls.each do |con_link|
      con_nodes = con_page.search("div[class='node node-article clearfix']//text()")
      con_text=con_nodes.map(&:text).delete_if{|x| x !~ /\w/}
      con_text.each_with_index do |con_string,i|
+           if con_info.has? con_text[i+1]
+                 puts 'blank'
+           else
                  case con_string
-      when ('Area:' AND con_info.has? con_text[i+1])
+      when 'Area:' 
        puts 'Area: ' + con_string
-      when ('Ward:' AND con_info.has? con_text[i+1])
+      when 'Ward:' 
       puts 'Ward: ' + con_string     
-      when ('Elected:' AND con_info.has? con_text[i+1])
+      when 'Elected:' 
       puts 'Elected: ' + con_string      
-      when ('Party:' AND con_info.has? con_text[i+1])
+      when 'Party:' 
        puts 'Party: ' + con_string      
-      when ('Address:' AND con_info.has? con_text[i+1])
+      when 'Address:' 
       puts 'Address: ' + con_string     
-      when ('Email:' AND con_info.has? con_text[i+1])
+      when 'Email:' 
       puts 'Email: ' + con_string      
-      when ('Phone:' AND con_info.has? con_text[i+1])
+      when 'Phone:' 
       puts 'Phone: ' + con_string      
-      when ('Mobile:' AND con_info.has? con_text[i+1])
+      when 'Mobile:'
       puts 'Mobile: ' + con_string     
-      when ('Fax:' AND con_info.has? con_text[i+1])
+      when 'Fax:' 
       puts 'Fax: ' + con_string
       else
             puts "blank"
 end
-
+end
   end
             
      
