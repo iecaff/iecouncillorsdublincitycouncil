@@ -53,7 +53,7 @@ page_urls.each do |con_link|
       else
             puts "blank"
 end
-end
+
 con_record = {
 :auth =>     con_area.to_s,
 :lea 	=>     con_ward.to_s,
@@ -66,7 +66,7 @@ con_record = {
 :address => con_address.to_s
 }
 
-  
+  end
   ScraperWiki.save_sqlite([:name], con_record)
   end          
      
