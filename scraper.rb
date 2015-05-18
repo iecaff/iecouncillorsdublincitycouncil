@@ -55,15 +55,15 @@ page_urls.each do |con_link|
 end
 end
 con_record = {
-:auth =>     con_area,
-:lea 	=>     con_ward,
-:name =>	con_name,
-:party =>	con_party,
-:email =>	con_email,
-:phone =>	con_phone,
-:mobile =>	con_mobile,
+:auth =>     con_area.to_s,
+:lea 	=>     con_ward.to_s,
+:name =>	con_name.to_s,
+:party =>	con_party.to_s,
+:email =>	con_email.to_s,
+:phone =>	con_phone.to_s,
+:mobile =>	con_mobile.to_s,
 :image =>	con_image.to_s,
-:address => con_address
+:address => con_address.to_s
 }
 
   
