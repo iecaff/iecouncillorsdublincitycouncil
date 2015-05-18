@@ -67,7 +67,7 @@ con_record = {
 }
 
   end
- # ScraperWiki.save_sqlite([:name], con_record)
+  ScraperWiki.save_sqlite([:name], con_record)
   end          
      
 end
