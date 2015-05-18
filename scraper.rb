@@ -65,8 +65,9 @@ con_record = {
 :image =>	con_image.to_s,
 :address => con_address
 }
-ScraperWiki.save_sqlite([:name], con_record)
+
   end
+  ScraperWiki.save_sqlite([:name], con_record)
   end          
      
 end
