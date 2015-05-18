@@ -22,7 +22,7 @@ page_urls.each do |con_link|
      con_text=con_nodes.map(&:text).delete_if{|x| x !~ /\w/}
      con_text.each_with_index do |con_string,i|
            if con_info.include? con_text[i+1]
-                 puts 'blank'
+             #    puts 'blank'
            else
                  case con_string
       when 'Area:' 
@@ -32,7 +32,7 @@ page_urls.each do |con_link|
       puts 'Ward: ' + con_text[i+1]   
       con_ward = con_text[i+1]   
       when 'Elected:' 
-      puts 'Elected: ' + con_text[i+1]      
+    #  puts 'Elected: ' + con_text[i+1]      
       when 'Party:' 
        puts 'Party: ' + con_text[i+1]   
        con_party = con_text[i+1]   
@@ -49,9 +49,9 @@ page_urls.each do |con_link|
       puts 'Mobile: ' + con_text[i+1] 
       con_mobile = con_text[i+1]   
       when 'Fax:' 
-      puts 'Fax: ' + con_text[i+1]
+   #   puts 'Fax: ' + con_text[i+1]
       else
-            puts "blank"
+          #  puts "blank"
 end
 
 con_record = {
