@@ -4,6 +4,18 @@ require 'mechanize'
 
 mechanize = Mechanize.new
 
+con_record = {
+:auth =>     '',
+:lea 	=>     '',
+:name =>	'',
+:party =>	'',
+:email =>	'',
+:phone =>	'',
+:mobile =>	'',
+:image =>	'',
+:address => ''
+}
+
 front_page = mechanize.get('http://www.dublincity.ie/main-menu-your-council-your-city-councillors/full-councillor-list')
 page_urls = front_page.search('div#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField a')
 con_info = ['Area:','Ward:','Elected:','Party:','Address:','Email:','Phone:','Mobile:','Fax:',nil]
